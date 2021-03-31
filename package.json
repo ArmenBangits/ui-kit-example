@@ -22,7 +22,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "chromatic": "npx chromatic --project-token 686739eea775"
   },
   "eslintConfig": {
     "extends": [
@@ -59,6 +60,15 @@
     "@storybook/node-logger": "^6.2.1",
     "@storybook/preset-create-react-app": "^3.1.7",
     "@storybook/react": "^6.2.1",
-    "chromatic": "^5.7.0"
-  }
+    "chromatic": "^5.7.0",
+    "semantic-release": "^17.4.2"
+  },
+  "plugins": [
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/release-notes-generator",
+    "@semantic-release/changelog",
+    "@semantic-release/github",
+    "@semantic-release/npm",
+    "@semantic-release/git"
+  ]
 }
